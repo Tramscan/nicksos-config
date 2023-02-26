@@ -8,7 +8,6 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-<<<<<<< HEAD
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "wl" ];
@@ -21,29 +20,11 @@
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/5B56-5A8D";
-=======
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" "wl" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
-
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/3aa98d60-8eeb-43cb-8e7e-49144f32c6d6";
-      fsType = "ext4";
-    };
-
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/6D15-846E";
->>>>>>> a52bce3 (lol)
       fsType = "vfat";
     };
 
   swapDevices =
-<<<<<<< HEAD
     [ { device = "/dev/disk/by-uuid/162e56ec-9789-427b-8aa1-77a1ab8419f5"; }
-=======
-    [ { device = "/dev/disk/by-uuid/f3902856-c590-4a4d-9618-b1ce8e9d03aa"; }
->>>>>>> a52bce3 (lol)
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
